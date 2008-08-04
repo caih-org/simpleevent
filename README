@@ -1,0 +1,31 @@
+Please read the INSTALL file before running these commands.
+
+A simple example:
+
+{{{
+from simpleevent import Event
+
+
+class TestClassWithEvent:
+
+    def __init__(self):
+        self.onsomeevent = Event()
+
+    def someevent(self):
+        self.onsomeevent("param")
+
+
+def someeventhandler1(param):
+    print("Handler 1 = %s" % param)
+
+
+def someeventhandler2(param):
+    print("Handler 2 = %s" % param)
+
+test = TestClassWithEvent()
+test.onsomeevent += someeventhandler1
+test.onsomeevent += someeventhandler2
+test.someevent()
+}}}
+
+
