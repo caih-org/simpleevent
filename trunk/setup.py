@@ -13,7 +13,7 @@ class TestClassWithEvent:
     def __init__(self):
         self.onsomeevent = Event()
 
-    def someevent():
+    def someevent(self):
         self.onsomeevent("param")
 
 
