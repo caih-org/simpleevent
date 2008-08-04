@@ -1,7 +1,8 @@
 #!/bin/sh
 
 function copy {
-	cp ../trunk/$1 $1.wiki
+	B=${2:-"$1"}
+	cp ../trunk/$1 $B.wiki
 }
 
 copy README
@@ -9,3 +10,4 @@ copy INSTALL
 copy TODO
 copy ChangeLog
 copy COPYING
+copy example.py EXAMPLE
