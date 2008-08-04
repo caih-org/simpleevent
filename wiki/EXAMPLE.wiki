@@ -1,3 +1,4 @@
+{{{
 from simpleevent import Event
 
 
@@ -13,4 +14,4 @@ ontestevent += handler1
 ontestevent += handler2
 
 ontestevent("test")
-
+}}}
