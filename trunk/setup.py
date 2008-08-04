@@ -5,6 +5,8 @@
 simpleevent.py: A simple event class for python
 """
 
+import os
+
 classifiers = """\
 Development Status :: 4 - Beta
 Intended Audience :: Developers
@@ -15,16 +17,18 @@ Topic :: Software Development :: Libraries :: Python Modules
 
 from distutils.core import setup
 
+examplepath = os.path.join('docs', 'example.py')
 doclines = __doc__.strip().splitlines()
-example = open("example.py")
+example = open(examplepath)
 doclines.extend(['\n', '\n'])
 doclines.extend(example.readlines())
 example.close()
 
-setup(name='simpleevent',
+setup(name = 'simpleevent',
       version = '0.1',
       py_modules = ['simpleevent'],
-      maintainer = u'César Izurieta',
+      data_files = [('docs', [examplepath])],
+      maintainer = 'César Izurieta',
       maintainer_email = 'cesar@caih.org',
       url = 'http://code.google.com/p/simpleevent',
       license = 'http://www.gnu.org/copyleft/gpl.html',

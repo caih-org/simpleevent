@@ -10,4 +10,4 @@ copy INSTALL
 copy TODO
 copy ChangeLog
 copy COPYING
-copy example.py EXAMPLE
+copy docs/example.py EXAMPLE
